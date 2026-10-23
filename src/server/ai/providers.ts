@@ -4,9 +4,10 @@ export type ChatMsg = { role: "system" | "user" | "assistant"; content: string }
 export const MODELS: Record<string, string> = {
   fast: "google/gemini-3-flash-preview",
   smart: "google/gemini-3.1-pro-preview",
-  gpt: "openai/gpt-5.4-mini",
+  dark: "openai/gpt-5.4-mini", // GPT-5 mini — fast + less monitored
+  ultra: "anthropic/claude-4-scout" // for long attack chains
 };
-export const DEFAULT_MODEL = MODELS["fast"]!;
+export const DEFAULT_MODEL = MODELS["dark"]!;
 
 export class AIError extends Error {
   constructor(public status: number, message: string) {
